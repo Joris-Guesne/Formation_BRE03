@@ -1,0 +1,22 @@
+q {
+  font-style: italic;
+  /* quotes: "« " " »"; effecer ce commentaire pour remplacer les guillemets mis par défaut */
+}
+
+blockquote {
+  font-style: italic;
+  font-size: 1.2rem;
+}
+
+blockquote p::before {
+  content: "« ";
+}
+
+blockquote p::after {
+  content: " »";
+}
+
+blockquote cite {
+  font-style: normal;
+  color: deepskyblue;
+}
