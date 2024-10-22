@@ -1,0 +1,166 @@
+/*---font import---*/
+
+@font-face {
+    font-family: 'Courgette';
+    src: url(../fonts/Courgette-Regular.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*||||||||||||||||||||||||||||||||
+------------- BASES --------------*/
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    /* Passage de la police de 16px par défaut, à 10px -----> 10/16*100= 62.5 */
+}
+
+body {
+    margin: 0;
+    font-size: 18px;
+    /*1rem*/
+    width: 980px;
+    margin: auto;
+}
+
+/*||||||||||||||||||||||||||||||||
+------------- FONTS --------------*/
+
+h1 {
+    font-family: 'Courgette';
+    font-size: 2.222em;
+    /* 40px */
+    text-align: center;
+    color: #003884;
+}
+
+h2 {
+    font-family: 'Courgette';
+    font-size: 1.944em;
+    /* 35px */
+    text-align: center;
+    color: #4f89b9;
+}
+
+h3 {
+    font-family: 'Courgette';
+    font-size: 1.389em;
+    /* 25px */
+    text-align: center;
+    color: #003884;
+}
+
+
+/*||||||||||||||||||||||||||||||||
+------------ HEADER -------------*/
+
+.seal-header {
+    display: flex;
+    justify-content: center;
+}
+
+/*||||||||||||||||||||||||||||||||
+------------- MAIN --------------*/
+
+menu ol {
+    font-family: 'Courgette';
+    font-size: 1.111em;
+    /* 20px */
+    text-align: left;
+    color: #003884;
+}
+
+menu ol a {
+    text-decoration: none;
+}
+
+blockquote {
+    background-color: #d7e1ef;
+}
+
+.citation-new-york {
+    font-family: 'Courgette';
+    font-size: 1.389em;
+    /* 25px */
+    text-align: center;
+    color: #003884;
+}
+
+.simone {
+    font-family: 'Courgette';
+    font-size: 1em;
+    /* 18px */
+    text-align: center;
+    color: #003884;
+}
+
+.main-content p {
+    font-family: "Source Sans 3", serif;
+    color: #444;
+    line-height: 1.5em;
+}
+
+.main-content ul {
+    font-family: "Source Sans 3", serif;
+    color: #444;
+}
+
+
+strong {
+    color: #003884;
+    font-weight: 600;
+}
+
+em {
+    color: #4f89b9;
+}
+
+/*||||||||||||||||||||||||||||||||
+------------- IMAGES -------------*/
+
+.img-left {
+    float: left;
+    margin-right: 1em;
+}
+
+.img-right {
+    float: right;
+    margin-left: 1em;
+}
+
+.title-image {
+    text-align: center;
+}
+
+.fa-brands {
+    font-size: 1.67em;
+    color: #003884;
+}
+
+/*||||||||||||||||||||||||||||||||
+------------- FOOTER -------------*/
+
+footer {
+    text-align: center;
+    border-top: solid 2px #003884;
+}
+
+footer p {
+    font-family: "Source Sans 3", serif;
+    color: #444;
+}
+
+.copyright {
+    font-size: 0.778em;
+}
+
+/*||||||||||||||||||||||||||||||||
+------------- TOOLS --------------*/
+
+.clear {
+    clear: both;
+}

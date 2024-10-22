@@ -1,0 +1,45 @@
+/*******************************
+ *          GENERALITES        *
+ *******************************/
+
+body {
+    line-height: 1.5em;
+}
+
+article {
+    text-align: justify;
+}
+
+/*******************************
+ *          MAIN LAYOUT        *
+ *******************************/
+
+.container {
+    width: 960px;
+    margin: auto;
+}
+
+/*******************************
+ *         IMAGES FLOAT        *
+ *******************************/
+
+.img-left,
+.img-right {
+    margin: 0.5em;
+}
+
+.img-left {
+    float: left;
+}
+
+.img-right {
+    float: right;
+}
+
+/*******************************
+ *            TOOLS            *
+ *******************************/
+
+.clear {
+    clear: both;
+}
