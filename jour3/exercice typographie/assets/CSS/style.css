@@ -1,0 +1,133 @@
+/*|||||||||||||||||||||||||||||||||||||||||||||||||*/
+
+/*-----------------  FONT IMPORT  -----------------*/
+
+@font-face {
+    font-family: 'SpecialElite';
+    src: url(../fonts/specialelite/SpecialElite.woff) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cardo';
+    src: url(../fonts/cardo/cardo-regular.woff) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cardo';
+    src: url(../fonts/cardo/cardo-italic.woff) format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Cardo';
+    src: url(../fonts/cardo/cardo-bold.woff) format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/*|||||||||||||||||||||||||||||||||||||||||||||||||*/
+
+/*----------------  MAIN CONTENT  -----------------*/
+
+body {
+    background-color: white;
+}
+
+main {
+    width: 420px;
+    margin: auto;
+    line-height: 1.5;
+    color: #333333;
+}
+
+p {
+    font-family: 'Cardo';
+    text-align: justify;
+}
+
+article p:first-letter {
+    float: left;
+    font-family: 'SpecialElite';
+    font-size: 2em;
+    margin-right: 0.3em;
+    padding-top:0.2em;
+}
+
+/*|||||||||||||||||||||||||||||||||||||||||||||||||*/
+
+/*-------------------  TITLES  --------------------*/
+
+h1 {
+    font-family: 'SpecialElite';
+    font-size: 4em;
+    line-height: 2;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-family: 'SpecialElite';
+    font-size: 2.5em;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-family: 'SpecialElite';
+    font-size: 1.5em;
+    line-height: 1;
+}
+
+h3::before {
+    content: "❧ ";
+}
+
+/*|||||||||||||||||||||||||||||||||||||||||||||||||*/
+
+/*----------------  QUOTE RELATED  ----------------*/
+
+blockquote {
+    font-family: 'Cardo';
+    font-style: italic;
+    font-size: 1.2em;
+}
+
+cite::before,
+blockquote p::before {
+    content: "« ";
+}
+
+cite::after,
+blockquote p::after {
+    content: " »";
+}
+
+.author {
+    text-align: center;
+}
+
+/*|||||||||||||||||||||||||||||||||||||||||||||||||*/
+
+/*-----------------  DECORATION  ------------------*/
+
+.bottom-decoration {
+    font-size: 3em;
+    text-align: center;
+}
+
+.content {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+a,
+.underline-dashed {
+    color: #333333;
+    text-decoration-line: underline;
+    text-decoration-style: dashed;
+    text-underline-offset: 0.4em;
+}

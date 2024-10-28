@@ -1,0 +1,116 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    /* Passage de la police de 16px par défaut, à 10px -----> 10/16*100= 62.5 */
+}
+
+body {
+    margin: 0;
+    font-size: 14px;
+    background-image: url('../img/fond.png');
+}
+
+
+
+/*===============HEADER===============*/
+
+header,
+main {
+    width: 750px;
+    margin: auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5em;
+    background-color: #b8cb21;
+    color: #2C4726;
+}
+
+menu {
+    display: flex;
+    justify-content: center;
+}
+
+menu li {
+    list-style-type: none;
+    font-family: Oswald;
+    font-size: 1.43em;
+    text-decoration: underline;
+    text-transform: uppercase;
+    margin: 1em;
+}
+
+/*===============MAIN CONTENT===============*/
+
+main {
+    background-color: white;
+    padding: 1.5em;
+    line-height: 1.5;
+}
+
+h1 {
+    font-family: Oswald;
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 2.14em;
+    text-align: center;
+    color: #2C4726;
+    margin: 0;
+}
+
+h2 {
+    font-family: Oswald;
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    color: #2C4726;
+}
+
+h2::before {
+    content: "\f18c  ";
+    font-family: "Font Awesome 6 Brands";
+    color: #b8cb21;
+}
+
+article {
+    padding-top: 2em;
+}
+
+p,
+li {
+    font-family: Verdana, sans-serif;
+    color: #2C4726;
+}
+
+button {
+    float: right;
+    background-color: #b8cb21;
+    color: #2C4726;
+    height: 3em;
+    width: 6.5em;
+    border: none;
+}
+
+.article-img {
+    float: left;
+    margin-right: 1em;
+}
+
+/*===============FOOTER===============*/
+
+footer {
+    font-size: 0.86em;
+    text-align: center;
+}
+
+/*===============TOOLS===============*/
+
+.clear {
+    clear: both;
+}
