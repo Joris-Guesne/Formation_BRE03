@@ -1,0 +1,28 @@
+.button {
+    display: inline-block;
+    background-color: black;
+    color: white;
+    padding: 1em;
+}
+
+.defaut:link {
+    text-decoration: none;
+}
+
+.visite:visited {
+    background-color: #444;
+    text-decoration: underline;
+}
+
+.survol:hover {
+    background-color: #FF0000;
+}
+
+.clic:active {
+    background-color: #0000FF;
+}
+
+.focus:focus {
+    background-color: #fff;
+    color: black;
+}

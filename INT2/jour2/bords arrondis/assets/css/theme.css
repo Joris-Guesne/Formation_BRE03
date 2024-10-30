@@ -1,0 +1,41 @@
+.border-1 {
+    border-radius: 1em;
+}
+
+.border-2 {
+    border-radius: 2em;
+}
+
+.border-3 {
+    border-top-left-radius: 2em;
+}
+
+.border-4 {
+    border-radius: 1em 2em 3em 4em;
+}
+
+.circle-1 {
+    border: 1px solid black;
+    padding: 0;
+    border-radius: 50%;
+    width: 20rem;
+    line-height: 19.8rem;
+    text-align: center;
+}
+
+.circle-2 {
+    padding: 0;
+    border-radius: 50%;
+    width: 20rem;
+    border-left: solid 10rem #d16bff;
+    border-right: solid 10rem #f98bf6;
+    border-top: solid 10rem #f600d7;
+    border-bottom: solid 10rem #800080;
+}
+
+/*
+border-left: ridge 50px rgba(255, 0, 255, 0.5);
+    border-right: groove 50px rgba(255, 130, 255, 0.5);
+    border-top: outset 100px rgba(255, 255, 0, 0.5);
+    border-bottom: inset 100px rgba(255, 0, 0, 0.5);
+    */
