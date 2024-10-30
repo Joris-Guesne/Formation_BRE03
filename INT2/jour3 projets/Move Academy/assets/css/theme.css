@@ -1,1 +1,189 @@
+* {
+    box-sizing: border-box;
+}
 
+html {
+    font-size: 62.5%; /* Passage de la police de 16px par défaut, à 10px -----> 10/16*100= 62.5 */
+}
+
+body {
+    margin: 0;
+    font-size:16px; /* On remet le body à 16px, la valeur par défaut */
+}
+
+.container {
+    width: 1200px;
+    margin: auto;
+}
+
+/*||||||||||||||||||||||||||||||||||||||||||||||||||||
+HEADER
+*/
+
+header > img{
+    display: flex;
+    margin: auto;
+}
+
+header > menu {
+    display: inline-flex;
+    width: 100%;
+    justify-content: space-around;
+    background-color: #7e4a7c;
+    list-style-type: none;
+    padding: 0.7em;
+}
+
+header > menu > li > a {
+    font-family: Economica;
+    font-size: 2.4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+}
+
+/*||||||||||||||||||||||||||||||||||||||||||||||||||||
+TITLES
+*/
+
+h1 {
+    font-family: Economica;
+    font-size: 5rem;
+    font-weight: bold;
+    color:#7e4a7c;
+    text-align: center;
+}
+
+h2 {
+    font-family: Economica;
+    font-size: 4rem;
+    font-weight: bold;
+    color:#b878b5;
+}
+
+h3 {
+    font-family: Economica;
+    font-size: 3rem;
+    font-weight: bold;
+    color:#7e4a7c;
+    margin-top: 0;
+}
+
+/*||||||||||||||||||||||||||||||||||||||||||||||||||||
+MAIN
+*/
+
+p,
+ul>li,
+th,
+td {
+    font-family: 'Open Sans', sans-serif;
+}
+
+article > p:first-of-type,
+div > p:first-of-type {
+    font-style: italic;
+    color: #7e4a7c;
+    margin-top: 0;
+}
+
+.more-button {
+    font-family: Economica;
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: bolder;
+    color: #fff;
+    background-color: #7e4a7c;
+    padding: 0.5em 1em;
+}
+
+/*----------------------------
+about section - left
+*/
+
+.about-section {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.about-section > article:first-of-type{
+    width:80%;
+    padding-right: 2em;
+}
+.about-section > article > img {
+    float: left;
+    margin-right: 1em;
+    
+}
+
+/*----------------------------
+about section - right
+*/
+
+.about-section > article:nth-child(2) > ul {
+    padding-left: 0;
+}
+.about-section > article:nth-child(2) > ul > li {
+    padding-bottom: 1em;
+    list-style-type: none;
+}
+
+.about-section > article:nth-child(2) > ul > li::before {
+    content: "➤ ";
+    color: #b878b5;
+}
+
+/*----------------------------
+teachers section
+*/
+
+.teacher-section {
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.teacher-section > article {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    margin-bottom: 3em;
+}
+
+.teacher-section > article > div {
+    padding: 0 1em;
+}
+
+/*----------------------------
+schredule section
+*/
+
+table {
+    background-color: #fff;
+    text-align: center;
+    width: 90%;
+    margin: auto;
+    border-collapse: collapse;
+    border:1px solid #b878b5;
+}
+
+td,
+th {
+    border:1px solid #b878b5;
+    padding: 1em 2em;
+}
+
+th {
+    background-color: #7e4a7c;
+    color: #fff;
+}
+
+tr > td:first-of-type {
+    font-weight: bold;
+}
+
+.empty-table-data {
+    background-color: #ffeefe;
+}
