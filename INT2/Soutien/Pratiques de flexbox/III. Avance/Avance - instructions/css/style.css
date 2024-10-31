@@ -77,3 +77,72 @@ div, nav, section, ul {
 /******************************************************************************/
 
 /****************************** TON CODE ICI ********************************/
+
+/*-------------------
+brand-tools
+*/
+
+.brand-tools {
+    display: flex;
+    justify-content: space-between;
+}
+
+/*-------------------
+user-tools
+*/
+
+.user-tools {
+    display: flex;
+    justify-content: space-between;
+}
+
+.user-tools ul {
+    display: flex;
+}
+
+.user-tools li {
+    padding: 1em
+}
+
+/*-------------------
+shop-tools
+*/
+
+.shop-tools {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1em;
+}
+
+.shipping {
+    display: flex;
+    flex-wrap: wrap;
+    width: 30%;
+}
+
+.shipping a {
+    margin-right: 1em;
+}
+
+.title h1{
+    margin:0;
+}
+
+/*-------------------
+nav
+*/
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navigation ul {
+    display: flex;
+}
+
+.navigation ul li {
+    margin: 0.5em 1em;
+}
