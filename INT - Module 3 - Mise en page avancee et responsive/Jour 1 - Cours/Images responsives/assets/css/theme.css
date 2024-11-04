@@ -1,0 +1,24 @@
+body {
+  background-image: url("../img/phare.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+main {
+  padding: 4em;
+}
+
+article {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+section img {
+  max-width: 100%;
+  height: auto;
+}
+
+section {
+  margin: 1em;
+}

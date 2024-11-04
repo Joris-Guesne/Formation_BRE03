@@ -1,0 +1,44 @@
+/* *****************************************************************
+ MAIN
+***************************************************************** */
+
+.page {
+  margin: 2em;
+  background-color: #fff;
+}
+
+main {
+  display: flex;
+  padding: 2rem;
+  flex-wrap: wrap;
+}
+
+header,
+footer {
+  padding: 2rem;
+  background-color: silver;
+  font-size: 2rem;
+  color: black;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+article {
+  width: 100%;
+}
+/* *****************************************************************
+ VERSION TABLETTE
+***************************************************************** */
+@media screen and (min-width: 780px) {
+  article {
+    width: 50%;
+  }
+}
+
+/* *****************************************************************
+ VERSION DESKTOP
+***************************************************************** */
+@media screen and (min-width: 1200px) {
+  article {
+    width: 25%;
+  }
+}
