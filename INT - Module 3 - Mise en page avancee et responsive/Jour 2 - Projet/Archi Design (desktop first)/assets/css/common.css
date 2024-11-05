@@ -1,0 +1,392 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; /* Passage de la police de 16px par défaut, à 10px -----> 10/16*100= 62.5 */
+}
+
+body {
+  margin: 0;
+  font-size: 18px; /* On remet le body à 16px, la valeur par défaut */
+  background-color: #fff;
+}
+
+/*********************************************************
+HEADER
+*********************************************************/
+
+header {
+  display: flex;
+  justify-content: center;
+  background-image: url("../img/path.png");
+  background-size: auto;
+  background-position: bottom;
+  background-repeat: repeat-x;
+  background-color: #00748d;
+}
+
+/*-------------------------------------------------------
+container flex
+*/
+.header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 100%;
+  margin: 1em;
+}
+
+/*-------------------------------------------------------
+header - left side
+*/
+header .logo-title {
+  display: flex;
+  align-items: baseline;
+  font-family: "Fjalla One", sans-serif;
+  font-size: 2rem;
+  color: #fff;
+}
+
+header .logo-title p {
+  font-family: "Fjalla One", sans-serif;
+  width: 50%;
+  align-items: baseline;
+  margin-left: 0.5em;
+}
+
+/*-------------------------------------------------------
+header - right side
+*/
+header menu {
+  font-family: "Fjalla One", sans-serif;
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+}
+
+header menu li a {
+  text-decoration: none;
+  font-size: 2rem;
+  color: #fff;
+  margin: 0.5em;
+  padding: 0.5em;
+}
+header menu li a:hover {
+  background-color: #fff;
+  color: #00748d;
+}
+
+/*********************************************************
+MAIN
+*********************************************************/
+
+/*-------------------------------------------------------
+general
+*/
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.more-button {
+  background-color: #00748d;
+  color: #fff;
+  font-family: "Nunito", sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+  padding: 0.5em 4em;
+}
+
+.more-button:hover {
+  cursor: pointer;
+}
+
+/*-------------------------------------------------------
+titles
+*/
+h1 {
+  font-family: "Fjalla One", sans-serif;
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #cb8606;
+  padding: 0.5em;
+  text-align: center;
+}
+
+h2 {
+  font-family: "Nunito", sans-serif;
+  font-size: 2.5rem;
+  color: #00748d;
+  background-color: #fff;
+  padding: 0.5em;
+  text-align: center;
+}
+
+h3 {
+  font-family: "Fjalla One", sans-serif;
+  font-size: 3rem;
+  text-align: center;
+  color: #00748d;
+  text-align: center;
+}
+
+h3::before {
+  content: "- ";
+  color: #cb8606;
+}
+
+h3::after {
+  content: " -";
+  color: #cb8606;
+}
+
+h4 {
+  font-family: "Fjalla One", sans-serif;
+  font-size: 2rem;
+  color: #4b4b4b;
+}
+
+/*-------------------------------------------------------
+content
+*/
+
+p {
+  font-family: "Nunito", sans-serif;
+  font-size: 0.9em;
+}
+
+.content-header {
+  background-image: url("../img/bg-header.jpg");
+  background-size: cover;
+  background-position: center;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+}
+
+/*-------------------------------------------------------
+prestations
+*/
+.prestations-article {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: top;
+  width: 100%;
+}
+
+.prestations-article h3 {
+  width: 100%;
+  margin: 4em 0 2em 0;
+}
+
+.prestations-article section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20%;
+  margin: 1em;
+}
+.prestations-article h4 {
+  margin: 1em 0 0 0;
+}
+.prestations-article section .fa-icon {
+  background-color: #cb8606;
+  font-size: 2em;
+  padding: 0.5em;
+  color: #fff;
+}
+
+/*-------------------------------------------------------
+prestataires
+*/
+
+.prestataires-article {
+  display: grid;
+  grid-template: repeat(2, auto) / repeat(4, auto);
+  justify-content: space-between;
+  justify-items: center;
+  width: 100%;
+}
+
+.prestataires-article h3 {
+  grid-row: 1/2;
+  grid-column: 1/5;
+  width: 100%;
+  margin: 4em 0 2em 0;
+}
+.prestataires-article img {
+  width: 80%;
+  border: 3px solid #00748d;
+}
+/*********************************************************
+FOOTER
+*********************************************************/
+footer {
+  display: flex;
+  justify-content: center;
+  background-image: url("../img/path.png");
+  background-size: auto;
+  background-position: bottom;
+  background-repeat: repeat-x;
+  background-color: #00748d;
+  margin-top: 3em;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  margin: 1em;
+}
+
+footer i {
+  font-size: 1.5em;
+  color: #fff;
+  margin: 0.5em;
+}
+
+footer .logo-title {
+  display: flex;
+  align-items: baseline;
+  font-family: "Fjalla One", sans-serif;
+  font-size: 2rem;
+  color: #fff;
+}
+
+footer .logo-title p {
+  font-family: "Fjalla One", sans-serif;
+  width: 50%;
+  align-items: baseline;
+  margin-left: 0.5em;
+}
+
+/*|||||||||||||||||||||||||||||||||||||||||||||||||
+MEDIA - Tablet
+|||||||||||||||||||||||||||||||||||||||||||||||||||*/
+
+@media screen and (max-width: 990px) {
+  /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  header - tablet
+  */
+  header .logo-title {
+    margin-top: 1em;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .header-container {
+    flex-direction: column;
+  }
+  .header-container menu {
+    justify-content: space-around;
+  }
+
+  /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  prestations - tablet
+  */
+  .prestations-article section {
+    width: 45%;
+    margin-bottom: 5em;
+  }
+  .prestations-article h3 {
+    margin: 2em 0 2em 0;
+  }
+
+  /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  prestataires - tablet
+  */
+  .prestataires-article {
+    grid-template: repeat(3, auto) / repeat(2, auto);
+    justify-content: space-around;
+    gap: 2em;
+  }
+  .prestataires-article img {
+    width: 80%;
+  }
+  .prestataires-article h3 {
+    grid-row: 1/2;
+    grid-column: 1/3;
+    width: 100%;
+    margin: 2em 0 2em 0;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .content-header {
+    background-size: cover;
+    background-position: left;
+    height: auto;
+  }
+
+  /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  prestations - phone
+  */
+  .prestations-article section {
+    width: 100%;
+    margin-bottom: 5em;
+  }
+
+  /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  prestataires - phone
+  */
+  .prestataires-article {
+    grid-template: repeat(5, auto) / repeat(1, auto);
+    justify-content: space-around;
+    gap: 2em;
+  }
+  .prestataires-article h3 {
+    grid-row: 1/2;
+    grid-column: 1/2;
+    width: 100%;
+    margin: 2em 0 2em 0;
+  }
+
+  /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  footer - tablet
+  */
+  .footer-container {
+    flex-direction: column-reverse;
+  }
+
+  footer .logo-title {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 1em;
+  }
+  footer .logo-title p {
+    width: 100%;
+    margin: 0.2em 0 1em 0;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  header menu {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  header menu li {
+    width: 100%;
+    margin: auto;
+    padding: 0.5em;
+  }
+
+  header menu li a {
+    width: 100%;
+  }
+
+  .content-header h2 {
+    max-width: 80%;
+  }
+}

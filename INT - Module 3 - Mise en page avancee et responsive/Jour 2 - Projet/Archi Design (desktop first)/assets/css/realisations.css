@@ -1,0 +1,29 @@
+h3 {
+  color: #cb8606;
+}
+
+h3::before,
+h3::after {
+  color: #00748d;
+}
+
+.photo-section {
+  width: 75%;
+}
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  width: 20%;
+}
+
+.photo-grid img {
+  align-self: stretch;
+  justify-self: stretch;
+  object-fit: cover;
+  border: #00748d 3px solid;
+}
+
+.portrait {
+  grid-row: span 2;
+}
