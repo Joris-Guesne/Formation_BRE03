@@ -1,0 +1,64 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; /* Passage de la police de 16px par défaut, à 10px -----> 10/16*100= 62.5 */
+}
+
+body {
+  margin: 0;
+  font-size: 18px; /* On remet le body à 16px, la valeur par défaut */
+}
+
+.container {
+  max-width: 1400px;
+  margin: auto;
+}
+
+h1 {
+}
+
+header {
+  padding-top: 2em;
+}
+
+.logo-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-section img {
+  width: 20%;
+}
+
+header menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.carousel {
+  width: 100%;
+}
+.carousel img {
+  width: 50%;
+  height: auto;
+  margin: auto;
+}
+
+.home-welcome img {
+  width: 100%;
+}
+
+.individual-menu {
+  background-color: #ebe3db;
+}
+
+.individual-menu img {
+  width: 100%;
+}

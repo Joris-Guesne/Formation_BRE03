@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Galerie d'image avec le plugin jQuerry Fancy box"
+    />
+    <title>Template module 3</title>
+    <link rel="stylesheet" href="assets/css/common-v3.css" type="text/css" />
+    <link rel="stylesheet" href="assets/css/swipebox.min.css" type="text/css" />
+    <link rel="stylesheet" href="assets/css/theme.css" type="text/css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <h1>Pluggin jquery Swipe Box</h1>
+      <p>Galerie d'image avec le plugin jQuerry Fancy box</p>
+    </header>
+    <main class="container">
+      <section>
+        <h2>Swipe box</h2>
+        <div>
+          <a
+            href="assets/img/abstract1-grand.jpg"
+            class="swipebox"
+            title="Des jolies formes violettes"
+          >
+            <img
+              src="assets/img/abstract1-vignette.jpg"
+              alt="Des jolies formes violettes"
+            />
+          </a>
+          <a
+            href="assets/img/abstract2-grand.jpg"
+            class="swipebox"
+            title="Des jolies formes multicolores"
+          >
+            <img
+              src="assets/img/abstract2-vignette.jpg"
+              alt="Des jolies formes multicolores"
+            />
+          </a>
+          <a href="assets/img/nature1-grand.jpg" class="swipebox">
+            <img src="assets/img/nature1-vignette.jpg" alt="" />
+          </a>
+          <a href="assets/img/nature2-grand.jpg" class="swipebox">
+            <img src="assets/img/nature2-vignette.jpg" alt="" />
+          </a>
+          <a href="assets/img/nature3-grand.jpg" class="swipebox">
+            <img src="assets/img/nature3-vignette.jpg" alt="" />
+          </a>
+          <a href="assets/img/tech1-grand.jpg" class="swipebox">
+            <img src="assets/img/tech1-vignette.jpg" alt="" />
+          </a>
+          <a href="assets/img/tech2-grand.jpg" class="swipebox">
+            <img src="assets/img/tech2-vignette.jpg" alt="" />
+          </a>
+          <a href="assets/img/tech3-grand.jpg" class="swipebox">
+            <img src="assets/img/tech3-vignette.jpg" alt="" />
+          </a>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <p>
+        <a rel="license" href="https://3wa.fr/propriete-materiel-pedagogique/"
+          ><img alt="Propriété de la 3W Academy" src="assets/img/logo-3wa.png"
+        /></a>
+      </p>
+      <p>
+        Ce matériel pédagogique est la propriété de la
+        <a rel="license" href="https://3wa.fr/propriete-materiel-pedagogique/"
+          >3W Academy</a
+        >. Cet exercice a été réalisé par Stephane Pereck.
+      </p>
+    </footer>
+    <script type="text/javascript" src="assets/js/jquery-3.5.1.min.js"></script>
+    <script
+      type="text/javascript"
+      src="assets/js/jquery.swipebox.min.js"
+    ></script>
+    <script>
+      $(function () {
+        $(".swipebox").swipebox();
+      });
+    </script>
+  </body>
+</html>
