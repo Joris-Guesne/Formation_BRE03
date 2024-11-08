@@ -17,6 +17,36 @@ body {
 }
 
 h1 {
+  font-family: "Athiti";
+  font-weight: 600;
+  font-size: 1em;
+  text-transform: uppercase;
+}
+
+h1::before,
+h1::after,
+h2::before,
+h2::after,
+h3::before,
+h3::after {
+  content: "\f005";
+  font-family: FontAwesome;
+  font-size: 0.8rem;
+  margin: 1em;
+  vertical-align: middle;
+  color: #950000;
+}
+
+h2 {
+  font-family: "Merienda";
+  text-align: center;
+  font-size: 3rem;
+}
+
+h3 {
+  font-family: "Merienda";
+  text-align: center;
+  font-size: 2rem;
 }
 
 header {
@@ -42,9 +72,14 @@ header menu {
   padding: 0;
 }
 
+main {
+  padding-inline: 1rem;
+}
+
 .carousel {
   width: 100%;
 }
+
 .carousel img {
   width: 50%;
   height: auto;
@@ -61,4 +96,26 @@ header menu {
 
 .individual-menu img {
   width: 100%;
+}
+.individual-menu ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.individual-menu ul li {
+  width: 100%;
+  border-bottom: 1px dashed #000;
+}
+
+footer {
+  background-image: url("../img/footer-bg.jpg");
+  color: #fff;
+}
+
+footer > div section {
+  text-align: center;
+}
+
+footer > div section a i {
+  color: #fff;
 }

@@ -1,0 +1,233 @@
+/*********************************************************************/
+/*                           WIREFRAMING                             */
+/*********************************************************************/
+* {
+  box-sizing: border-box;
+}
+
+body * {
+  background-color: rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.page-container {
+  max-width: 1200px;
+  margin: auto;
+}
+/*//////////////////////////////////////////////////////
+HEADER
+//////////////////////////////////////////////////////*/
+header div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+header img {
+  width: 20rem;
+}
+
+h1 {
+  text-align: center;
+  width: 100%;
+}
+
+/*____________________________________________________
+navbar
+*/
+
+.main-navbar,
+.sticked-navbar {
+  width: 100%;
+}
+
+.main-navbar menu,
+.sticked-navbar menu {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.main-navbar menu li,
+.sticked-navbar menu li {
+  padding: 1rem;
+}
+
+.sticked-navbar {
+  display: none;
+  position: sticky;
+  top: 0;
+  background-color: #cccccc;
+}
+
+/*/ /////////////////////////////////////////////////////
+MAIN
+//////////////////////////////////////////////////////*/
+
+/*____________________________________________________
+banner
+*/
+.banner {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.banner section {
+  max-width: 600px;
+  margin: 2em;
+  padding: 2em;
+}
+
+/*____________________________________________________
+content
+*/
+.container-cols-2 img {
+  width: 100%;
+}
+
+.galerie-figure img {
+  width: 100%;
+}
+
+/*//////////////////////////////////////////////////////
+FOOTER
+//////////////////////////////////////////////////////*/
+footer {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+/*____________________________________________________
+footer-content
+*/
+footer > div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+/*____________________________________________________
+footer-linkedin/contact + legal/credit
+*/
+footer > div > div {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+footer a > img {
+  width: 2rem;
+}
+
+/*____________________________________________________
+footer - logo
+*/
+footer > div > img {
+  width: 20rem;
+}
+
+/*____________________________________________________
+footer - legal/credit
+*/
+footer > div > div:last-of-type {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+footer > div > div:last-of-type > p {
+  width: 100%;
+  text-align: center;
+}
+
+/*/ /////////////////////////////////////////////////////
+TOOLS
+//////////////////////////////////////////////////////*/
+.top-button {
+  bottom: 5%;
+  right: 5%;
+  position: fixed;
+  z-index: 4;
+}
+
+.top-button a {
+  padding: 2rem;
+}
+
+/*||||||||||||||||||||||||||||||||||||||||||||||||||||||
+MEDIA QUERIES - to tablet
+||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
+@media screen and (min-width: 780px) {
+  .container-flex-cols {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .container-flex-cols section {
+    width: 45%;
+    margin: 1rem;
+  }
+
+  .container-cols-2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  .container-cols-2 figure {
+    width: 40%;
+    margin: 2rem 0 2rem 0;
+  }
+
+  .main-navbar {
+    display: none;
+  }
+
+  .sticked-navbar {
+    display: block;
+  }
+}
+
+/*||||||||||||||||||||||||||||||||||||||||||||||||||||||
+MEDIA QUERIES - to desktop
+||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
+@media screen and (min-width: 1200px) {
+  header div {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  header h1 {
+    width: auto;
+  }
+  .main-navbar {
+    width: auto;
+  }
+
+  .container-flex-cols section {
+    width: 30%;
+    margin: 1rem;
+  }
+
+  footer > div {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+
+  footer > div div,
+  footer > div div:last-of-type {
+    flex-direction: column;
+    width: auto;
+    justify-content: start;
+    align-items: stretch;
+    text-align: center;
+  }
+  .main-navbar {
+    display: block;
+  }
+  .sticked-navbar {
+    display: none;
+  }
+}
