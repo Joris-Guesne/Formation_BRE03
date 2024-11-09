@@ -76,6 +76,8 @@ HEADER
 ///////////////////////////////////////////////////////////////////*/
 header {
   padding-top: 2em;
+  display: flex;
+  flex-direction: column;
 }
 
 .logo-section {
@@ -102,6 +104,7 @@ header menu li {
   padding: 0.5em;
   width: 100%;
   border-bottom: 1px solid #4c4343;
+  background-color: #ebe3db;
 }
 header menu li:first-of-type {
   background-color: #4c4343;
@@ -154,12 +157,20 @@ FOOTER
 ///////////////////////////////////////////////////////////////////*/
 footer {
   background-image: url("../img/footer-bg.jpg");
+  background-size: cover;
   color: #fff;
   padding: 1em;
+  margin-top: 1rem;
+}
+
+footer div {
+  display: flex;
+  flex-direction: column;
 }
 
 footer > div section {
   text-align: center;
+  width: 100%;
 }
 
 footer > div section a i {
@@ -171,6 +182,10 @@ TOOLS
 ///////////////////////////////////////////////////////////////////*/
 
 .more-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
   background-color: #4c4343;
   border-radius: 0;
   border: 0;
@@ -180,7 +195,102 @@ TOOLS
 }
 
 .more-button a {
+  position: relative;
   text-decoration: none;
-  font-weight: bold;
   color: #fff;
+}
+
+.more-button img {
+  width: 20px;
+  height: auto;
+  margin-right: 0.5em;
+  height: auto;
+}
+
+/*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+MEDIA-QUERIES - to tablet
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
+
+@media screen and (min-width: 780px) {
+  header menu {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  header menu li {
+    width: 10%;
+    border:0;
+  }
+
+  footer div {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  footer div section {
+    width: 30%;
+  }
+
+}
+
+/*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+MEDIA-QUERIES - to desktop
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
+
+@media screen and (min-width: 1100px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+
+  .logo-section {
+    flex-direction: row;
+  }
+
+  header menu {
+    flex-direction: row;
+    justify-content: space-around;
+    width: 40%;
+    background-color: #fff;
+  }
+
+  header menu li {
+    width: 20%;
+  }
+
+  .home-welcome {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .home-welcome h2 {
+    width: 100%;
+  }
+
+  .home-welcome img {
+    width: 40%;
+    height: 100%;
+  }
+
+  .home-welcome article {
+    width: 60%;
+  }
+
+  .menus-section {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .menus-section h2 {
+    width: 100%;
+  }
+  .individual-menu {
+    width: 32%;
+  }
 }
