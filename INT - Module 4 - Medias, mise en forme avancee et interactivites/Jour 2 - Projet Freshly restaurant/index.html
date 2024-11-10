@@ -35,19 +35,27 @@
         <h1>Freshly Restaurant</h1>
       </section>
       <menu>
-        <li>Home</li>
-        <li>About</li>
-        <li>Menus</li>
-        <li>Contact</li>
+        <li class="nav-transition">Home</li>
+        <li class="nav-transition">About</li>
+        <li class="nav-transition">Menus</li>
+        <li class="nav-transition">Contact</li>
       </menu>
     </header>
     <main class="container">
-      <!-- 
+      <!--
       <div class="carousel">
-        <img src="assets/img/slider-01.jpg" alt="" />
-        <img src="assets/img/slider-02.jpg" alt="" />
-        <img src="assets/img/slider-03.jpg" alt="" />
-      </div> -->
+        <div>
+          <img src="assets/img/slider-01.jpg" alt="" />
+        </div>
+        <div>
+          <img src="assets/img/slider-02.jpg" alt="" />
+        </div>
+        <div>
+          <img src="assets/img/slider-03.jpg" alt="" />
+        </div>
+      </div>
+      -->
+
       <section class="home-welcome">
         <h2>Welcome to Freshly Restaurant</h2>
         <img src="assets/img/location.jpg" alt="" />
@@ -89,7 +97,7 @@
             <li>Veineux le biesal mar viso.</li>
           </ul>
           <div class="more-button">
-            <img src="./assets/img/fork-knife.svg" alt="">
+            <img src="./assets/img/fork-knife.svg" alt="" />
             <a href="#">See more</a>
           </div>
         </article>
@@ -104,7 +112,7 @@
             <li>Veineux le biesal mar viso.</li>
           </ul>
           <div class="more-button">
-            <img src="./assets/img/fork-knife.svg" alt="">
+            <img src="./assets/img/fork-knife.svg" alt="" />
             <a href="#">See more</a>
           </div>
         </article>
@@ -119,7 +127,7 @@
             <li>Veineux le biesal mar viso.</li>
           </ul>
           <div class="more-button">
-            <img src="./assets/img/fork-knife.svg" alt="">
+            <img src="./assets/img/fork-knife.svg" alt="" />
             <a href="#">See more</a>
           </div>
         </article>
@@ -155,11 +163,13 @@
       src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.min.js"
     ></script>
     <script>
-      $(".carousel").slick({
-        dots: true,
-        arrows: true,
-        slideToShow: 1,
-        slideToScroll: 1,
+      $(document).ready(function ($) {
+        $(".carousel").slick({
+          arrows: true,
+          dots: true,
+          cssEase: "ease-out",
+          autoplay: true,
+        });
       });
     </script>
   </body>

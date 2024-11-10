@@ -115,19 +115,32 @@ main {
   padding-inline: 1rem;
 }
 
+.nav-transition {
+  transition: transform 0.1s, background-color 0.1s, border-radius 0.1s;
+}
+
+.nav-transition:hover {
+  background-color: #950000;
+  color: #fff;
+  transform: scale(1.1);
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
 /*///////////////////////////////////////////////////////////////////
 MAIN
 ///////////////////////////////////////////////////////////////////*/
 .carousel {
+  width: 90%;
+  margin: 0px auto;
+}
+.slick-slide {
+  margin: 10px;
+}
+.slick-slide img {
   width: 100%;
+  border: 2px solid #fff;
 }
-
-.carousel img {
-  width: 50%;
-  height: auto;
-  margin: auto;
-}
-
 .home-welcome img {
   width: 100%;
 }
@@ -219,7 +232,7 @@ MEDIA-QUERIES - to tablet
 
   header menu li {
     width: 10%;
-    border:0;
+    border: 0;
   }
 
   footer div {
@@ -230,7 +243,6 @@ MEDIA-QUERIES - to tablet
   footer div section {
     width: 30%;
   }
-
 }
 
 /*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
