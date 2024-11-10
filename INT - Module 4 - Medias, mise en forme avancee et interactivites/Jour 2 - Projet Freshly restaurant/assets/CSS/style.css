@@ -46,6 +46,7 @@ h2 {
   font-family: "Merienda";
   text-align: center;
   font-size: 3rem;
+  margin-top: 2em;
 }
 
 h3 {
@@ -130,17 +131,7 @@ main {
 /*///////////////////////////////////////////////////////////////////
 MAIN
 ///////////////////////////////////////////////////////////////////*/
-.carousel {
-  width: 90%;
-  margin: 0px auto;
-}
-.slick-slide {
-  margin: 10px;
-}
-.slick-slide img {
-  width: 100%;
-  border: 2px solid #fff;
-}
+
 .home-welcome img {
   width: 100%;
 }

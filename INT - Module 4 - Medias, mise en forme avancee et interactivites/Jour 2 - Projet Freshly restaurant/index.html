@@ -5,7 +5,18 @@
     <meta name="description" content="Welcome to the house od good food !" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
     <link rel="stylesheet" href="./assets/CSS/style.css" type="text/css" />
+    <link rel="stylesheet" href="./assets/CSS/slick.css" type="text/css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -22,11 +33,6 @@
       href="https://fonts.googleapis.com/css2?family=Athiti:wght@200;300;400;500;600;700&family=Economica:ital,wght@0,400;0,700;1,400;1,700&family=Fjalla+One&family=Merienda:wght@300..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick-theme.css"
-    />
   </head>
   <body>
     <header class="container">
@@ -42,19 +48,11 @@
       </menu>
     </header>
     <main class="container">
-      <!--
       <div class="carousel">
-        <div>
-          <img src="assets/img/slider-01.jpg" alt="" />
-        </div>
-        <div>
-          <img src="assets/img/slider-02.jpg" alt="" />
-        </div>
-        <div>
-          <img src="assets/img/slider-03.jpg" alt="" />
-        </div>
+        <div class="carousel-img1"></div>
+        <div class="carousel-img2"></div>
+        <div class="carousel-img3"></div>
       </div>
-      -->
 
       <section class="home-welcome">
         <h2>Welcome to Freshly Restaurant</h2>
@@ -157,20 +155,12 @@
         </section>
       </div>
     </footer>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-3.5.2.js"></script>
     <script
       type="text/javascript"
-      src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.min.js"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
     ></script>
-    <script>
-      $(document).ready(function ($) {
-        $(".carousel").slick({
-          arrows: true,
-          dots: true,
-          cssEase: "ease-out",
-          autoplay: true,
-        });
-      });
-    </script>
+    <script src="./assets/js/slick.js"></script>
   </body>
 </html>
