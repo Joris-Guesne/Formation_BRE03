@@ -6,7 +6,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/CSS/normalize.css" type="text/css" />
-    <link rel="stylesheet" href="./assets/CSS/style.css" type="text/css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <!--Source Sans - Import Google Fonts-->
@@ -19,61 +18,91 @@
       href="https://fonts.googleapis.com/css2?family=Athiti:wght@200;300;400;500;600;700&family=Economica:ital,wght@0,400;0,700;1,400;1,700&family=Fjalla+One&family=Merienda:wght@300..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Raleway:ital,wght@0,100..900;1,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
       rel="stylesheet"
     />
+    <!--Import Font Awesome-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./assets/CSS/style.css" type="text/css" />
   </head>
+
   <body>
-    <header>
-      <div class="container">
-        <div>
+    <header class="header">
+      <div class="header__container container">
+        <div class="header__options">
           <p>Options d'affichage : accessibilité</p>
-          <p>Thème : <a href="#">sombre contrasté</a> <a href="#">clair</a></p>
-          <p>Interlignage : <a href="#">simple</a> <a href="#">augmenté</a></p>
+          <p>
+            Thème : <a href="#" class="header__theme-link">sombre contrasté</a>
+            <a href="#" class="header__theme-link">clair</a>
+          </p>
+          <p>
+            Interlignage :
+            <a href="#" class="header__line-height-link">simple</a>
+            <a href="#" class="header__line-height-link">augmenté</a>
+          </p>
         </div>
-        <section>
-          <div class="logo-site">
-            <img src="./assets/img/logo.svg" alt="Logo du site HiTech.net" />
-            <h1>HiTech.NET</h1>
-            <p>Tout le matériel High-Tech</p>
+        <section class="header__logo-section">
+          <div class="header__logo logo-site">
+            <img
+              src="./assets/img/logo.svg"
+              alt="Logo du site HiTech.net"
+              class="logo-site__image"
+            />
+            <h1 class="logo-site__title">HiTech.NET</h1>
+            <p class="logo-site__description">Tout le matériel High-Tech</p>
           </div>
         </section>
-        <nav>
-          <menu>
-            <li>Ordinateurs</li>
-            <li>Périphériques & composants</li>
-            <li>Téléphones</li>
-            <li>Objets connectés</li>
+        <div class="header__more">
+          <p class="header__more-account">Mon compte</p>
+          <p class="header__more-cart">Mon panier</p>
+        </div>
+        <nav class="header__nav">
+          <menu class="header__menu">
+            <li class="header__menu-item ordinteurLogo">Ordinateurs</li>
+            <li class="header__menu-item peripheriquesLogo">
+              Périphériques & composants
+            </li>
+            <li class="header__menu-item telephoneLogo">Téléphones</li>
+            <li class="header__menu-item objetsLogo">Objets connectés</li>
           </menu>
         </nav>
+        <div></div>
       </div>
     </header>
-    <main>
+    <main class="container">
       <div>Fil d'arianne ici</div>
-      <section>
-        <h2>AOC 24B1XHS</h2>
-        <a href="#">Présentation</a><a href="#">Descriptif</a
-        ><a href="#">Caractéristiques techniques</a>
+      <section class="product">
+        <h2 class="product__title">AOC 24B1XHS</h2>
+        <div class="product__nav">
+          <a href="#" class="product__nav-link">Présentation</a>
+          <a href="#" class="product__nav-link">Descriptif</a>
+          <a href="#" class="product__nav-link">Caractéristiques techniques</a>
+        </div>
       </section>
-      <section>
-        <div>
-          <p class="tag">1920 x 1080 pixels</p>
-          <p class="tag">7 ms</p>
-          <p class="tag">Format large 16/9</p>
-          <p class="tag">Dalle IPS</p>
-          <p class="tag">HDMI</p>
-          <p class="tag">VGA</p>
-          <p class="tag">Noir</p>
+      <section class="product-details">
+        <div class="product-details__tags">
+          <p class="product-details__tag">1920 x 1080 pixels</p>
+          <p class="product-details__tag">7 ms</p>
+          <p class="product-details__tag">Format large 16/9</p>
+          <p class="product-details__tag">Dalle IPS</p>
+          <p class="product-details__tag">HDMI</p>
+          <p class="product-details__tag">VGA</p>
+          <p class="product-details__tag">Noir</p>
         </div>
-        <p>ICI JQUERRY</p>
-        <p>Marque: AOC</p>
-        <div class="price-buy">
-          <p>109€94</p>
-          <p class="under-price">dont éco-participation 1€70</p>
-          <div>
-            <button>Ajouter au panier</button>
-            <p>sdf</p>
+        <p class="product-details__jquery">ICI JQUERRY</p>
+        <p class="product-details__brand">Marque: AOC</p>
+        <div class="product-details__price-buy">
+          <p class="product-details__price">109€94</p>
+          <p class="product-details__eco-fee">dont éco-participation 1€70</p>
+          <div class="product-details__add-to-cart">
+            <button class="product-details__add-to-cart-btn">
+              Ajouter au panier
+            </button>
+            <p class="product-details__add-to-cart-text">sdf</p>
           </div>
-          <p>Garantie: 2 années vendeur</p>
+          <p class="product-details__warranty">Garantie: 2 années vendeur</p>
         </div>
-        <p>
+        <p class="product-details__description">
           Un écran 23,8" Full HD et sans bords; c'est sûrement votre futur
           moniteur pour la maison ou le bureau. AOC vous propose le 24B1XHS, un
           produit élégant au look doté d'une dalle VA avec un temps de réponse
@@ -81,29 +110,45 @@
           fonctionnel offre un contenu avec un fréquence de 60 Hz, idéal pour
           tous les usages du quotidien.
         </p>
-        <ul>
-          <li>Écran large de 23.8" avec résolution Full HD (1920 x 1080)</li>
-          <li>
+        <ul class="product-details__features">
+          <li class="product-details__feature">
+            Écran large de 23.8" avec résolution Full HD (1920 x 1080)
+          </li>
+          <li class="product-details__feature">
             Des couleurs riches et nuancées avec un contraste dynamique de
             20.000.000:1 (typique 1000:1)
           </li>
-          <li>Temps de réponse de 7 ms</li>
-          <li>Dalle IPS</li>
-          <li>Luminosité 250 cd/m²</li>
-          <li>Modes Flicker-Free et Anti-lumière bleue (Low blue mode)</li>
-          <li>Connecteurs : HDMI 1.4, VGA</li>
-          <li>Design sans contour & profil plat</li>
-          <li>Consommation d'énergie modeste : 25 Watts</li>
-          <li>Dimensions (avec support) : 419.8 x 540.1 x 186.8 mm</li>
-          <li>Poids : 2.48 kg</li>
+          <li class="product-details__feature">Temps de réponse de 7 ms</li>
+          <li class="product-details__feature">Dalle IPS</li>
+          <li class="product-details__feature">Luminosité 250 cd/m²</li>
+          <li class="product-details__feature">
+            Modes Flicker-Free et Anti-lumière bleue (Low blue mode)
+          </li>
+          <li class="product-details__feature">Connecteurs : HDMI 1.4, VGA</li>
+          <li class="product-details__feature">
+            Design sans contour & profil plat
+          </li>
+          <li class="product-details__feature">
+            Consommation d'énergie modeste : 25 Watts
+          </li>
+          <li class="product-details__feature">
+            Dimensions (avec support) : 419.8 x 540.1 x 186.8 mm
+          </li>
+          <li class="product-details__feature">Poids : 2.48 kg</li>
         </ul>
       </section>
-      <section>
-        <h2>Descriptif</h2>
-        <article>
-          <h3>Un moniteur Full HD performant et tout en finesse</h3>
-          <img src="./assets/img/slider/screen.png" alt="" />
-          <p>
+      <section class="product-description">
+        <h2 class="product-description__title">Descriptif</h2>
+        <article class="product-description__article">
+          <h3 class="product-description__article-title">
+            Un moniteur Full HD performant et tout en finesse
+          </h3>
+          <img
+            src="./assets/img/slider/screen.png"
+            alt=""
+            class="product-description__article-image"
+          />
+          <p class="product-description__article-text">
             Issu de la série B1, le moniteur AOC 24B1XHS dispose de tous les
             atouts indispensables pour offrir une expérience utilisateur
             agréable. Son écran Full HD de 23.8" s'accompagne d'une dalle IPS
@@ -114,34 +159,46 @@
             bureau pour toutes vos utilisations quotidiennes.
           </p>
         </article>
-        <article>
-          <h3>Appréciez le design sans contour</h3>
-          <img src="./assets/img/slider/desc-1.jpg" alt="" />
-          <p>
+        <article class="product-description__article">
+          <h3 class="product-description__article-title">
+            Appréciez le design sans contour
+          </h3>
+          <img
+            src="./assets/img/slider/desc-1.jpg"
+            alt=""
+            class="product-description__article-image"
+          />
+          <p class="product-description__article-text">
             En plus du look moderne et attrayant qu'il procure, le design sans
             contour permet des configurations à plusieurs écrans sans
             interruption. Votre curseur, vos fenêtres ne sont plus perdus dans
             les abysses sombres des contours lorsque plusieurs écrans sont
             placés les uns à côté des autres.
           </p>
-          <p>
+          <p class="product-description__article-text">
             Le profil plat de ce moniteur AOC offre de nombreux avantages. Très
             élégant sous tous les angles, il devient un choix idéal dans les
             espaces publics. Sa finesse et sa conception moderne lui permettent
             d'occuper moins de place sur le bureau.
           </p>
         </article>
-        <article>
-          <h3>Tout le confort nécessaire</h3>
-          <img src="./assets/img/slider/desc-2.jpg" alt="" />
-          <p>
+        <article class="product-description__article">
+          <h3 class="product-description__article-title">
+            Tout le confort nécessaire
+          </h3>
+          <img
+            src="./assets/img/slider/desc-2.jpg"
+            alt=""
+            class="product-description__article-image"
+          />
+          <p class="product-description__article-text">
             Agréable visuellement et intuitif, ce moniteur dispose également
             d'une dalle IPS. Cette dernière reproduit des couleurs éclatantes et
             offre de très larges angles de vue. De cette façon, les images
             gardent toujours un excellent aspect et une parfaite précision, quel
             que soit l'angle auquel vous regardez l'écran.
           </p>
-          <p>
+          <p class="product-description__article-text">
             Vous voulez utiliser votre écran même dans un environnement très
             lumineux, à côté d'une fenêtre au soleil par exemple ? La haute
             luminosité de 250 cd/m² garantit une bonne visibilité, même dans des
@@ -149,9 +206,9 @@
           </p>
         </article>
       </section>
-      <section>
+      <section class="product-details">
         <h2>Caractéristiques techniques</h2>
-        <article>
+        <article class="product-details__article">
           <h3>Affichage</h3>
           <table>
             <tr>
@@ -224,7 +281,7 @@
             </tr>
           </table>
         </article>
-        <article>
+        <article class="product-details__article">
           <h3>Écran</h3>
           <table>
             <tr>
@@ -261,7 +318,7 @@
             </tr>
           </table>
         </article>
-        <article>
+        <article class="product-details__article">
           <h3>Ergonomie</h3>
           <table>
             <tr>
@@ -290,7 +347,7 @@
             </tr>
           </table>
         </article>
-        <article>
+        <article class="product-details__article">
           <h3>Connectique</h3>
           <table>
             <tr>
@@ -307,7 +364,7 @@
             </tr>
           </table>
         </article>
-        <article>
+        <article class="product-details__article">
           <h3>Multimédia</h3>
           <table>
             <tr>
@@ -324,7 +381,7 @@
             </tr>
           </table>
         </article>
-        <article>
+        <article class="product-details__article">
           <h3>Caractéristiques physiques</h3>
           <table>
             <tr>
@@ -353,7 +410,7 @@
             </tr>
           </table>
         </article>
-        <article>
+        <article class="product-details__article">
           <h3>Alimentation</h3>
           <table>
             <tr>
@@ -372,5 +429,65 @@
         </article>
       </section>
     </main>
+    <footer class="footer">
+      <div class="footer__category">
+        <h3 class="footer__category-title">Moyens de paiements</h3>
+        <img
+          src="./assets/img/payment.png"
+          alt="Logos de différents moyens de paiment"
+          class="footer__category-image"
+        />
+      </div>
+
+      <nav class="footer__social">
+        <h3 class="footer__social-title">Sur les réseaux sociaux</h3>
+        <ul class="footer__social-list">
+          <li class="footer__social-item">Facebook</li>
+          <li class="footer__social-item">Instagram</li>
+          <li class="footer__social-item">Twitter</li>
+          <li class="footer__social-item">LinkedIn</li>
+        </ul>
+      </nav>
+
+      <nav class="footer__links">
+        <h3 class="footer__links-title">A propos</h3>
+        <ul class="footer__links-list">
+          <li class="footer__links-item">
+            <a href="#" class="footer__link">Qui sommes nous</a>
+          </li>
+          <li class="footer__links-item">
+            <a href="#" class="footer__link">Nos services</a>
+          </li>
+          <li class="footer__links-item">
+            <a href="#" class="footer__link">Contactez-nous</a>
+          </li>
+        </ul>
+      </nav>
+
+      <nav class="footer__legal">
+        <h3 class="footer__legal-title">Infos pratiques</h3>
+        <ul class="footer__legal-list">
+          <li class="footer__legal-item">
+            <a href="#" class="footer__link">Plan du site</a>
+          </li>
+          <li class="footer__legal-item">
+            <a href="#" class="footer__link">Foire aux questions</a>
+          </li>
+          <li class="footer__legal-item">
+            <a href="#" class="footer__link">Conditions générales de vente</a>
+          </li>
+          <li class="footer__legal-item">
+            <a href="#" class="footer__link">Informations légales</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="footer__license">
+        <p class="footer__license-text">
+          Ce matériel pédagogique est la propriété de la 3w Academy. Cet
+          exercice a été réalisé par Stéphane Pereck
+        </p>
+      </div>
+    </footer>
   </body>
 </html>

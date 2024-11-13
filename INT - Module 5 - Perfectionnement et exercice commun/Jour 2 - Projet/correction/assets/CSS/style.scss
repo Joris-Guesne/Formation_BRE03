@@ -1,3 +1,10 @@
+@font-face {
+  font-family: "Icons-HiTech";
+  src: url("../fonts/Icons.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -6,38 +13,293 @@ html {
   font-size: 62.5%; /* Passage de la police de 16px par défaut, à 10px -----> 10/16*100= 62.5 */
 }
 
-body {
-  margin: 0;
-  font-size: 16px; /* On remet le body à 16px, la valeur par défaut */
-}
-
 @import "./variables.scss";
 
+// Styles généraux pour le corps de la page
+
+body {
+  font-family: $default-font;
+  color: $text-color;
+  background-color: $bg;
+  font-size: $font-size;
+  line-height: $line-height;
+  margin: 0;
+  padding: 0;
+}
+
+// Styles pour les balises de titre
+h1,
+h2,
+h3 {
+  font-family: $heading-font;
+  color: $title-color;
+  line-height: $line-height;
+  font-weight: $font-weigth;
+}
+
+h1 {
+  font-size: $h1-size;
+  color: #fff;
+  filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.5));
+}
+h2 {
+  font-size: $h2-size;
+}
+h3 {
+  font-size: $h3-size;
+}
 .container {
   max-width: $max-width;
   margin: auto;
 }
 
-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.logo-site {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  img {
-    width: 6rem;
-    height: auto;
-    filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.5));
+// Header
+.header {
+  background-color: $header-bg;
+  color: $header-text;
+  &__options {
+    background-color: $menu-bg;
+    width: 100%;
   }
-  h1 {
+  &__container {
+    max-width: $max-width;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+
+    h1,
+    p {
+      margin: 0;
+    }
+  }
+
+  &__title {
     font-size: $h1-size;
-    font-family: $heading-font;
-    margin: 0.2em 0 0.2em 0;
+    color: $title-color;
   }
+
+  &__more {
+    display: flex;
+    margin-bottom: 2rem;
+    &-account {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 2rem;
+      &::before {
+        font-family: "Icons-HiTech";
+        content: "\e901";
+        font-size: 4rem;
+        translate: 0 1rem;
+      }
+    }
+    &-cart {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 2rem;
+      &::before {
+        font-family: "Icons-HiTech";
+        content: "\e900";
+        font-size: 4rem;
+        translate: 0 1rem;
+      }
+    }
+  }
+
+  &__nav {
+    background-color: $menu-bg;
+    box-shadow: $shadow-sm;
+    width: 100%;
+  }
+
+  &__menu {
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    &-item {
+      color: $link-color;
+      text-decoration: none;
+      margin-left: 1rem;
+
+      &:hover {
+        color: $link-hover;
+      }
+    }
+    .ordinteurLogo::before {
+      font-family: "Icons-HiTech";
+      content: "\e903  ";
+      font-size: 2rem;
+    }
+    .peripheriquesLogo::before {
+      font-family: "Icons-HiTech";
+      content: "\e906  ";
+      font-size: 2rem;
+    }
+    .telephoneLogo::before {
+      font-family: "Icons-HiTech";
+      content: "\e904  ";
+      font-size: 2rem;
+    }
+    .objetsLogo::before {
+      font-family: "Icons-HiTech";
+      content: "\e905  ";
+      font-size: 2rem;
+    }
+  }
+  .logo-site {
+    &__image {
+      width: 5rem;
+      filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.5));
+    }
+  }
+}
+
+// Main
+main {
+  background-color: $main-bg;
+  padding: 2rem 1rem;
+
+  &__content {
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
   p {
-    margin: 0;
+    font-size: $font-size;
+    line-height: $line-height;
+    color: $text-color;
+  }
+
+  .product-description {
+    &__article {
+      &-image {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+
+// Footer
+.footer {
+  background-color: $footer-bg;
+  padding: 2.5rem 0; // 40px
+  color: $footer-text;
+  font-family: $default-font;
+  font-size: $font-size;
+  line-height: $line-height;
+  box-shadow: $shadow-sm;
+
+  &__category,
+  &__social,
+  &__links,
+  &__legal {
+    margin-bottom: 1.875rem; // 30px
+  }
+
+  &__category {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &-title {
+      font-family: $heading-font;
+      font-size: $h3-size; // Utilise la taille de h3 définie dans les variables
+      color: $title-color;
+      margin-bottom: 1rem; // 16px
+    }
+
+    &-image {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  &__social {
+    &-title {
+      font-family: $heading-font;
+      font-size: $h3-size;
+      color: $title-color;
+      margin-bottom: 1rem; // 16px
+    }
+
+    &-list {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 1.25rem; // 20px
+
+      &-item {
+        font-size: $font-size;
+        color: $footer-text;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: $link-hover;
+        }
+      }
+    }
+  }
+
+  &__links,
+  &__legal {
+    &-title {
+      font-family: $heading-font;
+      font-size: $h3-size;
+      color: $title-color;
+      margin-bottom: 1rem; // 16px
+    }
+
+    &-list {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.625rem; // 10px
+
+      &-item {
+        font-size: $font-size;
+        color: $footer-text;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: $link-hover;
+        }
+
+        .footer__link {
+          color: $footer-link;
+          text-decoration: none;
+
+          &:hover {
+            color: $link-hover;
+          }
+        }
+      }
+    }
+  }
+
+  &__license {
+    text-align: center;
+    font-size: $font-size;
+    color: $footer-text;
+    margin-top: 2.5rem; // 40px
+
+    &-text {
+      font-size: $font-size;
+      color: $footer-text;
+    }
   }
 }
