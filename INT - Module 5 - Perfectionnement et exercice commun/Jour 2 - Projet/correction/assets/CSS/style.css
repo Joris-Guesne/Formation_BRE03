@@ -1,0 +1,43 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; /* Passage de la police de 16px par défaut, à 10px -----> 10/16*100= 62.5 */
+}
+
+body {
+  margin: 0;
+  font-size: 16px; /* On remet le body à 16px, la valeur par défaut */
+}
+
+.container {
+  max-width: 1140px;
+  margin: auto;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-site {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.logo-site img {
+  width: 6rem;
+  height: auto;
+  filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.5));
+}
+.logo-site h1 {
+  font-size: 36px;
+  font-family: "Raleway", sans-serif;
+  margin: 0.2em 0 0.2em 0;
+}
+.logo-site p {
+  margin: 0;
+}/*# sourceMappingURL=style.css.map */

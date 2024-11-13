@@ -1,0 +1,55 @@
+// General
+$max-width: 1140px;
+$font-size: 15px;
+$h1-size: 36px;
+$h2-size: 24px;
+$h3-size: 18px;
+$line-height: 1.5;
+
+// Fonts
+$default-font: "Open Sans", sans-serif;
+$heading-font: "Raleway", sans-serif;
+
+// Colors
+$bg: #eee;
+$bg-gray: #eee;
+$header-bg: #0c6588;
+$menu-bg: #e2f7ff;
+$main-bg: #fff;
+$footer-bg: #333;
+$title-color: #333;
+$text-color: #555;
+$header-text: #e2f7ff;
+$footer-text: #ddd;
+$link-color: #0c6588;
+$link-hover: #000;
+$footer-link: #eee;
+
+// Borders
+$border-sm: 1px solid #eee;
+$border-md: 1px solid #ddd;
+$border-lg: 2px solid #ccc;
+
+// Shadows
+$shadow-sm: 0 0 1px rgba(0, 0, 0, 0.2);
+$shadow-md: 0 0 3px rgba(0, 0, 0, 0.3);
+$shadow-lg: 0 0 5px rgba(0, 0, 0, 0.4);
+$shadow-xl: 0 10px 20px rgba(0, 0, 0, 0.5);
+
+// Contrasted dark theme
+$dark-bg: #222;
+$dark-bg-gray: #444;
+$dark-menu-bg: #0c6588;
+$dark-main-bg: #333;
+$dark-footer-bg: #333;
+$dark-title: #fff;
+$dark-text: #ddd;
+$dark-link: #e2f7ff;
+$dark-link-hover: #fff;
+$dark-border-sm: 1px solid #666;
+$dark-border-md: 1px solid #555;
+$dark-border-lg: 2px solid #444;
+
+// Larger line height
+$large-line-height: 2;
+$large-font-size: 1.6rem;
