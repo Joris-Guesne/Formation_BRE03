@@ -161,6 +161,8 @@ let users = [
   },
 ];
 
+//=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-> Étape 1 : Compter les utilisateurs et utilisatrices actif-ve-s
+
 /* Cette fonction retourne un tableau contenant uniquement les utilisateurs actifs */
 function getActiveUsers(usersArray) {
   let activeUsersArray = [];
@@ -177,6 +179,8 @@ function getNmbrActiveUsers(usersArray) {
   return getActiveUsers(usersArray).length;
 }
 
+//=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-> Étape 2 : Parmi les utilisateurs et utilisatrices acti-f-ves combien ont les yeux bleus ?
+
 /* Cette fonction retourne un nombre > les personnes actives ayant les yeux bleu */
 function getNmbrActiveBlueEyes(usersArray) {
   let activeUsersArray = getActiveUsers(usersArray);
@@ -190,10 +194,12 @@ function getNmbrActiveBlueEyes(usersArray) {
 }
 
 console.log(
-  `Out of our currently ${getNmbrActiveUsers(
+  `Parmis les ${getNmbrActiveUsers(
     users
-  )} active users, ${getNmbrActiveBlueEyes(users)} have blue eyes.`
+  )} utilisateurs actifs, ${getNmbrActiveBlueEyes(users)} ont les yeux bleus.`
 );
+
+//=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-> Étape 3 : Parmi les utilisateurs et utilisatrices actif-ve-s quel est l’âge moyen ?
 
 /* Cette fonction retourne un tableau comprenant tout les ages des personnes actives */
 function getActiveUsersAges(usersArray) {
@@ -218,10 +224,14 @@ function computeActiveUsersAverageAge(usersArray) {
 }
 
 console.log(
-  `Out of our currently ${getNmbrActiveUsers(
+  `Parmis les ${getNmbrActiveUsers(
     users
-  )} active users, the average age is ${computeActiveUsersAverageAge(users)}.`
+  )} utilisateurs actifs, la moyenne d'âge est de ${computeActiveUsersAverageAge(
+    users
+  )} ans.`
 );
+
+//=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-> Étape 4 : Rachat de MULTRON par CENTURIA
 
 /* Cette fonction retourne un tableau comprenant tout les objets du tableau usersArray (dans notre cas users) ayant pour proprieté > company: "MULTRON" */
 function getMultronUsers(usersArray) {
@@ -251,8 +261,10 @@ function getNumbrNewCenturiaUsers(usersArray) {
 console.log(
   `${getNumbrNewCenturiaUsers(
     users
-  )} user companies have been changed from MULTRON to CENTURIA.`
+  )} entreprises parmis tous les utilisateurs sont passées de MULTRON à CENTURIA.`
 );
+
+//=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-> Étape 5 : qui a les yeux marron et ne travaille pas chez CENTURIA ?
 
 /* Cette fonction retourne un tableau comprenant tout les objets du tableau usersArray (dans notre cas users) ayant pour proprieté > eyeColor: "brown" */
 function getBrownEyedUsers(usersArray) {
@@ -283,12 +295,14 @@ function getNmbrOfExcludedCenturiaWorkers(usersArray) {
 }
 
 console.log(
-  `${getNmbrOfExcludedCenturiaWorkers(
+  `Parmis tous les utilisateurs, ${getNmbrOfExcludedCenturiaWorkers(
     users
-  )} users with brown eyes do not work at CENTURIA`
+  )} ne travaillent pas a CENTURIA`
 );
 
-/* Cette fonction retourne un tableau comprenant tout les objets du tableau  usersArray (dans notre cas users) ayant pour proprieté > eyeColor equivalent au parametre "eyeColorNeeded" ("brown" , "green" ou "blue") */
+//=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-> Étape 6 : pour chacune des couleurs d’yeux, compter le nombre de users actif-ve-s et inactif-ve-s
+
+/* Cette fonction retourne un tableau comprenant tout les objets du tableau usersArray (dans notre cas users) ayant pour proprieté > eyeColor equivalent au parametre "eyeColorNeeded" ("brown" , "green" ou "blue") */
 function getEyeColorPerUsers(usersArray, eyeColorNeeded) {
   let eyeColorPerUserArray = [];
   for (let i = 0; i < usersArray.length; i++) {
@@ -299,6 +313,7 @@ function getEyeColorPerUsers(usersArray, eyeColorNeeded) {
   return eyeColorPerUserArray;
 }
 
+/* Cette fonction retourne un tableau comprenant tout les objets du tableau usersArray (dans notre cas users) ayant pour proprieté > isActive: true et > eyeColor equivalent au parametre "eyeColorNeeded" ("brown" , "green" ou "blue") */
 function getNmbrOfActiveUserPerEyeColor(usersArray, eyeColorNeeded) {
   let eyeColorPerUserArray = getEyeColorPerUsers(usersArray, eyeColorNeeded);
   let nmbrOfActiveUserPerEyeColor = 0;
@@ -310,6 +325,7 @@ function getNmbrOfActiveUserPerEyeColor(usersArray, eyeColorNeeded) {
   return nmbrOfActiveUserPerEyeColor;
 }
 
+/* Cette fonction retourne un tableau comprenant tout les objets du tableau usersArray (dans notre cas users) ayant pour proprieté > isActive: false et > eyeColor equivalent au parametre "eyeColorNeeded" ("brown" , "green" ou "blue") */
 function getNmbrOfInactiveUserPerEyeColor(usersArray, eyeColorNeeded) {
   let eyeColorPerUserArray = getEyeColorPerUsers(usersArray, eyeColorNeeded);
   let nmbrOfInactiveUserPerEyeColor = 0;
@@ -322,31 +338,31 @@ function getNmbrOfInactiveUserPerEyeColor(usersArray, eyeColorNeeded) {
 }
 
 console.log(
-  `Out of our brown eyed users ${getNmbrOfActiveUserPerEyeColor(
+  `Parmi nos utilisateurs qui ont les yeux marrons, ${getNmbrOfActiveUserPerEyeColor(
     users,
     "brown"
-  )} are active and ${getNmbrOfInactiveUserPerEyeColor(
+  )} sont actifs et ${getNmbrOfInactiveUserPerEyeColor(
     users,
     "brown"
-  )} are inactive`
+  )} sont inactifs.`
 );
 
 console.log(
-  `Out of our green eyed users ${getNmbrOfActiveUserPerEyeColor(
+  `Parmi nos utilisateurs qui ont les yeux verts, ${getNmbrOfActiveUserPerEyeColor(
     users,
     "green"
-  )} are active and ${getNmbrOfInactiveUserPerEyeColor(
+  )} sont actifs et ${getNmbrOfInactiveUserPerEyeColor(
     users,
     "green"
-  )} are inactive`
+  )} sont inactifs.`
 );
 
 console.log(
-  `Out of our blue eyed users ${getNmbrOfActiveUserPerEyeColor(
+  `Parmi nos utilisateurs qui ont les yeux bleus, ${getNmbrOfActiveUserPerEyeColor(
     users,
     "blue"
-  )} are active and ${getNmbrOfInactiveUserPerEyeColor(
+  )} sont actifs et ${getNmbrOfInactiveUserPerEyeColor(
     users,
     "blue"
-  )} are inactive`
+  )} sont inactifs.`
 );
