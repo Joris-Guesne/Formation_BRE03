@@ -1,0 +1,8 @@
+@use "../scss/variables.scss";
+
+footer {
+  text-align: center;
+  background-color: variables.$light-grey;
+  bottom: 0;
+  left: 0;
+}
