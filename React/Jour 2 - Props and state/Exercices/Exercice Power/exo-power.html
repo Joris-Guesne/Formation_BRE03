@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Exo - Power</title>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+    <!-- babel => compilation du JSX -->
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      const NumberValues = () => {
+        const numbers = [4, 3, 7];
+        let cubbedNumber = [];
+        for (let i = 0; i < numbers.length; i++) {
+          let expoNum = numbers[i] ** 3;
+          cubbedNumber.push(expoNum);
+        }
+        return cubbedNumber;
+      };
+
+      const Component = () => {
+        const cubbedNumber = NumberValues();
+        console.log(cubbedNumber);
+        return (
+          <div>
+            {cubbedNumber.map((num, index) => (
+              <p key={index}>{num}</p>
+            ))}
+          </div>
+        );
+      };
+
+      const Container = () => {
+        return (
+          <main>
+            <Component />
+          </main>
+        );
+      };
+
+      const App = () => {
+        return <Container />;
+      };
+
+      ReactDOM.render(<App />, document.querySelector("#root"));
+    </script>
+  </body>
+</html>
