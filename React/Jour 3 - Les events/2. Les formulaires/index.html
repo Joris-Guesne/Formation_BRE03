@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello React</title>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+    <!-- babel => compilation du JSX -->
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      /* Exercice 1 :
+        Créer le JSX des 3 composants suivants.
+        Pour le moment, on ne gère pas le state, ni les events.
+
+        1. Header avec en props logoSrc, siteTitle
+        Contient
+        - le logo du site avec logoSrc comme image
+        - le titre du site avec en contenu siteTitle
+
+        2. Footer avec en props copyright
+        Contient
+        - un paragraphe avec en contenu copyright
+
+        3. ContactForm
+        Contient un formulaire avec
+        - les champs : lastName, firstName, age, email, phone, message
+        - un bouton "Envoyer"
+      */
+
+      /* Exercice 2 : Au clic sur le bouton de soumission du formulaire,
+          afficher les données des champs dans la console, sans utiliser querySelector.
+          Utiliser les state à la place.
+      */
+
+      const Header = ({ logoSrc, siteTitle }) => {
+        return (
+          <header>
+            <img src={logoSrc} alt="Logo du site" />
+            <h1>{siteTitle}</h1>
+          </header>
+        );
+      };
+
+      const Footer = ({ copyright }) => {
+        return (
+          <footer>
+            <p>Blabla du copyright !</p>
+          </footer>
+        );
+      };
+
+      const ContactForm = () => {
+        const [contact, setContact] = React.useState({
+          lastName: "",
+          firstName: "",
+          age: 0,
+          email: "",
+          phone: "",
+          message: "",
+        });
+
+        const [hasSubmit, setHasSubmit] = React.useState(false);
+
+        const handleChange = (event) => {
+          const { value, name } = event.target;
+
+          const newContact = { ...contact };
+          newContact[name] = value;
+          setContact(newContact);
+        };
+
+        const handleSubmit = (event) => {
+          event.preventDefault();
+          setHasSubmit(true);
+          console.log(contact);
+        };
+
+        return hasSubmit ? (
+          <p>Demande prise en compte, on reviens vers vous bientot</p>
+        ) : (
+          <form>
+            <fieldset>
+              <legend>Entrez vos informations</legend>
+              <div>
+                <label htmlFor="lastName">Nom :</label>
+                <input
+                  type="text"
+                  id="lastName"
+                  value={contact.lastName}
+                  name="lastName"
+                  placeholder="Terrieur"
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+              <div>
+                <label htmlFor="firstName">Prénom :</label>
+                <input
+                  type="text"
+                  id="firstName"
+                  value={contact.firstName}
+                  name="firstName"
+                  placeholder="Alex"
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+              <div>
+                <label htmlFor="age">Âge :</label>
+                <input type="number" min="1" id="age" name="age" required />
+              </div>
+              <div>
+                <label htmlFor="email">Email :</label>
+                <input
+                  type="email"
+                  id="email"
+                  value={contact.email}
+                  name="email"
+                  placeholder="alex.terrieur@mail.fr"
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+              <div>
+                <label htmlFor="phone">Téléphone :</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  value={contact.phone}
+                  name="phone"
+                  placeholder="0314159265"
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+              <div>
+                <label htmlFor="message">Message :</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="Ecrivez un message ici si vous le souhaitez !"
+                  value={contact.messaage}
+                  onChange={handleChange}
+                ></textarea>
+              </div>
+              <div>
+                <button type="submit" onClick={handleSubmit}>
+                  Envoyer
+                </button>
+              </div>
+            </fieldset>
+          </form>
+        );
+      };
+      const App = () => {
+        return (
+          <React.Fragment>
+            <Header logoSrc="./logo.jpg" siteTitle="Un joli site" />
+            <ContactForm />
+            <Footer copyright="Nevezide" />
+          </React.Fragment>
+        );
+      };
+
+      ReactDOM.render(<App />, document.getElementById("root"));
+    </script>
+  </body>
+</html>
