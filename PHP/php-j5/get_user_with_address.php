@@ -5,16 +5,11 @@ $query = $db->prepare('
     SELECT users.first_name, users.last_name, address.street, address.city, address.zipcode
     FROM users JOIN address
     ON address.id = users.address 
-    WHERE users.id = :id
 ');
 
-$parameters = [
-    'id' => $_GET['id']
-];
+$query->execute();
 
-$query->execute($parameters);
+$users = $query->fetchAll(PDO::FETCH_ASSOC);
 
-$user = $query->fetch(PDO::FETCH_ASSOC);
-
-var_dump($user);
+var_dump($users);
 ?>
