@@ -1,20 +1,22 @@
 <?php
 
-$host = "db.3wa.io";
-$port = "3306";
-$dbname = "jorisguesne_php_j6";
-$connexionString = "mysql:host=$host;port=$port;dbname=$dbname;charset=utf8";
+require_once __DIR__ . '/vendor/autoload.php';
 
-$user = "jorisguesne";
-$password = "d4dcb9996956389775fdf3662779ac8b";
+// Chargement des variables d'environnement
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+
+// Utilisation des variables d'environnement
+$host = $_ENV['DB_HOST'];
+$port = $_ENV['DB_PORT'];
+$user = $_ENV['DB_USERNAME'];
+$password = $_ENV['DB_PASSWORD'];
+$dbname = $_ENV['DB_NAME'];
+
+$connexionString = "mysql:host=$host;port=$port;dbname=$dbname;charset=utf8";
 
 $db = new PDO(
     $connexionString,
     $user,
     $password
 );
-
-
-var_dump($db);
-
-?>
