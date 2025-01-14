@@ -7,7 +7,7 @@ class User
     public function __construct(private string $firstName, private string $lastName,  private string $email) {}
 
 
-    public function getId(): int
+    public function getId(): ?int
     {
         return $this->id;
     }
