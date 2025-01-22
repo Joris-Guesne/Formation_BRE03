@@ -1,6 +1,6 @@
 <?php
 
-class PageControllers
+class PageController
 {
     function __construct() {}
 
