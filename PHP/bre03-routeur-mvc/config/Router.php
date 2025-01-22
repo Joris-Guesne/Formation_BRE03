@@ -11,7 +11,7 @@ class Router
                 $pageController = new PageController();
                 $routeAbout = $pageController->about();
             }
-        } else if (!isset($get["route"])) {
+        } elseif (!isset($get["route"])) {
             $pageController = new PageController();
             $routeAbout = $pageController->home();
         } else {
