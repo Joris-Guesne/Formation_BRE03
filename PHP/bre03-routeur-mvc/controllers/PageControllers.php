@@ -16,6 +16,12 @@ class PageController
         require '../templates/layout.phtml';
     }
 
+    function contact()
+    {
+        $route = "contact";
+        require '../templates/layout.phtml';
+    }
+
     function notFound()
     {
         $route = "notFound";
