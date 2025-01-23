@@ -19,7 +19,6 @@ class UserController
     function checkCreate()
     {
         $route = "check_create_user";
-        require '../templates/users/show.phtml';
     }
 
     function update()
@@ -31,13 +30,11 @@ class UserController
     function checkUpdate()
     {
         $route = "check_update_user";
-        require '../templates/users/show.phtml';
     }
 
     function delete()
     {
         $route = "delete_user";
-        require '../templates/users/update.phtml';
     }
 
     function list(): void 
