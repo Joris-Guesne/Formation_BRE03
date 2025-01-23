@@ -6,16 +6,16 @@ class Router
     function handleRequest(array $get)
     {
         if (isset($get["route"])) {
-            if ($get["route"] === "show_user") {
+            if ($get["route"] === "show") {
                 $userController = new UserController();
                 $routeShow = $userController->show();
-            } elseif ($get["route"] === "create_user") {
+            } elseif ($get["route"] === "create") {
                 $userController = new UserController();
                 $routeCreate = $userController->create();
             } elseif ($get["route"] === "check_create_user") {
                 $userController = new UserController();
                 $routeCheckCreate = $userController->checkCreate();
-            } elseif ($get["route"] === "update_user") {
+            } elseif ($get["route"] === "update") {
                 $userController = new UserController();
                 $routeUpdate = $userController->update();
             } elseif ($get["route"] === "check_update_user") {

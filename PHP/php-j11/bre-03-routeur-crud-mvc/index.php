@@ -1,3 +1,3 @@
 <?php
 
-require './config/autoload.php';
+require 'config/autoload.php';

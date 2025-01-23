@@ -6,13 +6,13 @@ class UserController
 
     function show(): void
     {
-        $route = "show_user";
+        $route = "show";
         require '../templates/layout.phtml';
     }
 
     function create(): void
     {
-        $route = "create_user";
+        $route = "create";
         require '../templates/layout.phtml';
     }
 
@@ -24,7 +24,7 @@ class UserController
 
     function update(): void
     {
-        $route = "update_user";
+        $route = "update";
         require '../templates/layout.phtml';
     }
 
