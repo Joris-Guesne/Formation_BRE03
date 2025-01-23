@@ -10,7 +10,7 @@ class UserController
         require '../templates/users/show.phtml';
     }
 
-    function create()
+    function create(): void
     {
         $route = "create_user";
         require '../templates/users/create.phtml';
@@ -22,7 +22,7 @@ class UserController
         //developper la function check create
     }
 
-    function update()
+    function update(): void
     {
         $route = "update_user";
         require '../templates/users/update.phtml';
