@@ -1,4 +1,4 @@
 <?php
 
-require '../controllers/PageControllers.php';
+require '../controllers/UserController.php';
 require 'Router.php';

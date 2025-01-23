@@ -6,25 +6,42 @@ class UserController
 
     function show(): void
     {
-        $route = "show";
+        $route = "show_user";
         require '../templates/users/show.phtml';
     }
 
     function create()
     {
-        $route = "create";
+        $route = "create_user";
         require '../templates/users/create.phtml';
     }
 
-    function contact()
+    function checkCreate()
     {
-        $route = "contact";
-        require '../templates/layout.phtml';
+        $route = "check_create_user";
+        require '../templates/users/create.phtml';
     }
 
-    function notFound()
+    function update()
     {
-        $route = "notFound";
-        require '../templates/layout.phtml';
+        $route = "update_user";
+        require '../templates/users/update.phtml';
+    }
+
+    function checkUpdate()
+    {
+        $route = "check_update_user";
+        require '../templates/users/update.phtml';
+    }
+
+    function delete()
+    {
+        $route = "delete_user";
+        require '../templates/users/update.phtml';
+    }
+
+    function list(): void 
+    {
+        require '../templates/users/list.phtml';
     }
 }
