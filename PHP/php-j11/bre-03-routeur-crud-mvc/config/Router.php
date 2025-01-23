@@ -5,7 +5,6 @@ class Router
     function __construct() {}
     function handleRequest(array $get)
     {
-        require '../controllers/UserController.php';
         if (isset($get["route"])) {
             if ($get["route"] === "show_user") {
                 $userController = new UserController();
