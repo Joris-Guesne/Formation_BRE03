@@ -7,13 +7,13 @@ class UserController
     function show(): void
     {
         $route = "show_user";
-        require '../templates/users/show.phtml';
+        require '../templates/layout.phtml';
     }
 
     function create(): void
     {
         $route = "create_user";
-        require '../templates/users/create.phtml';
+        require '../templates/layout.phtml';
     }
 
     function checkCreate()
@@ -25,7 +25,7 @@ class UserController
     function update(): void
     {
         $route = "update_user";
-        require '../templates/users/update.phtml';
+        require '../templates/layout.phtml';
     }
 
     function checkUpdate()
@@ -43,6 +43,6 @@ class UserController
     function list(): void
     {
         $route = "list";
-        require '../templates/users/list.phtml';
+        require '../templates/layout.phtml';
     }
 }
