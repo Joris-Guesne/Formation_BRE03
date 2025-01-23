@@ -9,25 +9,25 @@ class Router
             if ($get["route"] === "show_user") {
                 $userController = new UserController();
                 $routeShow = $userController->show();
-            } elseif ($get["route"] === "create_user"){
+            } elseif ($get["route"] === "create_user") {
                 $userController = new UserController();
                 $routeCreate = $userController->create();
-            } elseif ($get["route"] === "check_create_user"){
+            } elseif ($get["route"] === "check_create_user") {
                 $userController = new UserController();
-                $routeCheckCreate = $userController->show();
-            } elseif ($get["route"] === "update_user"){
+                $routeCheckCreate = $userController->checkCreate();
+            } elseif ($get["route"] === "update_user") {
                 $userController = new UserController();
                 $routeUpdate = $userController->update();
-            } elseif ($get["route"] === "check_update_user"){
+            } elseif ($get["route"] === "check_update_user") {
                 $userController = new UserController();
-                $routeCheckUpdate = $userController->show();
-            } elseif ($get["route"] === "delete_user"){
+                $routeCheckUpdate = $userController->checkUpdate();
+            } elseif ($get["route"] === "delete_user") {
                 $userController = new UserController();
-                $routeDelete = $userController->update();
+                $routeDelete = $userController->delete();
             } else {
                 $userController = new UserController();
                 $routeList = $userController->list();
             }
-        } 
+        }
     }
 }

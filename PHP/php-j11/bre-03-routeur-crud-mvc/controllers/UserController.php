@@ -19,6 +19,7 @@ class UserController
     function checkCreate()
     {
         $route = "check_create_user";
+        //developper la function check create
     }
 
     function update()
@@ -30,15 +31,18 @@ class UserController
     function checkUpdate()
     {
         $route = "check_update_user";
+        //developper la function check update
     }
 
     function delete()
     {
         $route = "delete_user";
+        //developper la function delete
     }
 
-    function list(): void 
+    function list(): void
     {
+        $route = "list";
         require '../templates/users/list.phtml';
     }
 }
