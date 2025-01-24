@@ -2,32 +2,36 @@
 
 class Router
 {
-    function __construct() {}
-    function handleRequest(array $get)
+    public function __construct() {}
+    public function handleRequest(): void
     {
-        if (isset($get["route"])) {
-            if ($get["route"] === "show") {
+        if (isset($_GET["route"])) {
+
+            $route = $_GET["route"];
+
+            if ($route === "show_user") {
                 $userController = new UserController();
-                $routeShow = $userController->show();
-            } elseif ($get["route"] === "create") {
+                $userController->show();
+            } elseif ($route === "create_user") {
                 $userController = new UserController();
-                $routeCreate = $userController->create();
-            } elseif ($get["route"] === "check_create_user") {
+                $userController->create();
+            } elseif ($route === "check_create_user") {
                 $userController = new UserController();
-                $routeCheckCreate = $userController->checkCreate();
-            } elseif ($get["route"] === "update") {
+                $userController->checkCreate();
+            } elseif ($route === "update_user") {
                 $userController = new UserController();
-                $routeUpdate = $userController->update();
-            } elseif ($get["route"] === "check_update_user") {
+                $userController->update();
+            } elseif ($route === "check_update_user") {
                 $userController = new UserController();
-                $routeCheckUpdate = $userController->checkUpdate();
-            } elseif ($get["route"] === "delete_user") {
+                $userController->checkUpdate();
+            } elseif ($route === "delete_user") {
                 $userController = new UserController();
-                $routeDelete = $userController->delete();
+                $userController->delete();
             } else {
-                $userController = new UserController();
-                $routeList = $userController->list();
             }
+        } else {
+            $userController = new UserController();
+            $userController->list();
         }
     }
 }

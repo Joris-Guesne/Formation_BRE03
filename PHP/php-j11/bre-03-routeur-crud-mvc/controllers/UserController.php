@@ -2,47 +2,44 @@
 
 class UserController
 {
-    function __construct() {}
+    public function __construct() {}
 
-    function show(): void
+    public function show(): void
     {
-        $route = "show";
-        require '../templates/layout.phtml';
+        $calledTemplate = "show";
+        require 'templates/layout.phtml';
     }
 
-    function create(): void
+    public function create(): void
     {
-        $route = "create";
-        require '../templates/layout.phtml';
+        $calledTemplate = "create";
+        require 'templates/layout.phtml';
     }
 
-    function checkCreate()
+    public function update(): void
     {
-        $route = "check_create_user";
+        $calledTemplate = "update";
+        require 'templates/layout.phtml';
+    }
+
+    public function list(): void
+    {
+        $calledTemplate = "list";
+        require 'templates/layout.phtml';
+    }
+
+    public function checkCreate()
+    {
         //developper la function check create
     }
 
-    function update(): void
+    public function checkUpdate()
     {
-        $route = "update";
-        require '../templates/layout.phtml';
-    }
-
-    function checkUpdate()
-    {
-        $route = "check_update_user";
         //developper la function check update
     }
 
-    function delete()
+    public function delete()
     {
-        $route = "delete_user";
         //developper la function delete
-    }
-
-    function list(): void
-    {
-        $route = "list";
-        require '../templates/layout.phtml';
     }
 }
