@@ -6,36 +6,18 @@
  */
 
 
-class Category
+class Comment
 {
-    private string $title;
-    private string $description;
     private ?int $id = null;
+    private string $content;
+    private User $user;
+    private Post $post;
 
-    function __construct(string $title, string $description)
+    function __construct(string $content, User $user, Post $post)
     {
-        $this->title = $title;
-        $this->description = $description;
-    }
-
-    public function getTitle(): string
-    {
-        return $this->title;
-    }
-
-    public function setTitle(string $title): void
-    {
-        $this->title = $title;
-    }
-
-    public function getDescription(): string
-    {
-        return $this->description;
-    }
-
-    public function setDescription(string $description): void
-    {
-        $this->description = $description;
+        $this->content = $content;
+        $this->user = $user;
+        $this->post = $post;
     }
 
     public function getId(): ?int
@@ -46,5 +28,35 @@ class Category
     public function setId(?int $id): void
     {
         $this->id = $id;
+    }
+
+    public function getContent(): string
+    {
+        return $this->content;
+    }
+
+    public function setContent(string $content): void
+    {
+        $this->content = $content;
+    }
+
+    public function getUser(): User
+    {
+        return $this->user;
+    }
+
+    public function setUser(User $user): void
+    {
+        $this->user = $user;
+    }
+
+    public function getPost(): Post
+    {
+        return $this->post;
+    }
+
+    public function setPost(Post $post): void
+    {
+        $this->post = $post;
     }
 }
