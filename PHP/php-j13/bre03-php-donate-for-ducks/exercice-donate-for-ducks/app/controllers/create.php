@@ -1,6 +1,10 @@
 <?php
+require 'vendor/autoload.php';
 
-function calculateOrderAmount(int $amount): int {
+$stripe = new \Stripe\StripeClient($sk_test);
+
+function calculateOrderAmount(int $amount): int
+{
     // Replace this constant with a calculation of the order's amount
     // Calculate the order total on the server to prevent
     // people from directly manipulating the amount on the client
@@ -25,4 +29,3 @@ try {
     http_response_code(500);
     echo json_encode(['error' => $e->getMessage()]);
 }
-
