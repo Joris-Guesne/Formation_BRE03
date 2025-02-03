@@ -3,7 +3,7 @@
 /* global fetch */
 /* global URLSearchParams */
 
-const stripe;
+const stripe = Stripe(process.env.pk_test);
 
 let amount;
 initialize();
@@ -18,6 +18,7 @@ document
 
 // Fetches a payment intent and captures the client secret
 async function initialize() {
+  console.log("Je suis la fonction initialize");
   const { clientSecret } = await fetch("../app/controllers/create.php", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -32,10 +33,13 @@ async function initialize() {
 
   const paymentElement = elements.create("payment", paymentElementOptions);
   paymentElement.mount("#payment-element");
-  
-  const buttonSubmit = document.querySelector('form#payment-form button#submit');
+
+  const buttonSubmit = document.querySelector(
+    "form#payment-form button#submit"
+  );
   buttonSubmit.disabled = false;
-  buttonSubmit.querySelector("#button-text").textContent = "Don de " + amount + "€";
+  buttonSubmit.querySelector("#button-text").textContent =
+    "Don de " + amount + "€";
 }
 
 async function handleSubmit(e) {
