@@ -1,9 +1,0 @@
-{
-  "username_field": "Choisissez un nom d'utilisateur",
-  "email_field": "Entrez votre email",
-  "password_field": "Choisissez un mot de passe",
-  "confirm_password_field": "Confirmez votre mot de passe",
-  "register_submit_button": "S'inscrire",
-  "exist_account_question": "Vous avez déjà un compte ?",
-  "login_here_submit_link": "Connectez-vous ici"
-}
