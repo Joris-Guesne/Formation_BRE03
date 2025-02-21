@@ -1,0 +1,8 @@
+<h1>Liste des utilisateurs</h1>
+<ul>
+    <?php foreach ($users as $user) { ?>
+        <li>
+            <?= $user['first_name'] . ' ' . $user['last_name'] . ' à pour email : ' . $user['email'] ?>
+        </li>
+    <?php } ?>
+</ul>

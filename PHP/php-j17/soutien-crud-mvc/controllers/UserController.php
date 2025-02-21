@@ -62,7 +62,7 @@ class UserController
         $title = "Liste des utilisateurs";
 
         $userManager = new UserManager();
-        $userManager->findAll();
+        $users = $userManager->findAll();
 
         require "./templates/layout.phtml";
     }
