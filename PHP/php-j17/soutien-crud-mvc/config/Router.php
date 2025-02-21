@@ -5,8 +5,8 @@ class Router
 
     public function handleRequest()
     {
+        $userController = new UserController();
         if (isset($_GET["route"])) {
-            $userController = new UserController();
             if ($_GET["route"] === "show_user") {
                 $userController->show();
             } elseif ($_GET["route"] === "create_user") {
@@ -24,10 +24,10 @@ class Router
             } elseif ($_GET["route"] === "delete_user") {
 
                 $userController->delete();
-            } else {
-
-                $userController->list();
             }
+        } else {
+
+            $userController->list();
         }
     }
 }
