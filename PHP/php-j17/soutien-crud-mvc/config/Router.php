@@ -7,8 +7,8 @@ class Router
     {
         $userController = new UserController();
         if (isset($_GET["route"])) {
-            if ($_GET["route"] === "show_user") {
-                $userController->show();
+            if ($_GET["route"] === "show_user" && isset($_GET["id"])) {
+                $userController->show($_GET["id"]);
             } elseif ($_GET["route"] === "create_user") {
 
                 $userController->create();

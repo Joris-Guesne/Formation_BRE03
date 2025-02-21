@@ -26,12 +26,12 @@ class UserController
         header('Location: index.php');
     }
 
-    public function show(): void
+    public function show($userId): void
     {
         $template = "./templates/users/show.phtml";
         $title = "Infos utilisateur";
         $userManager = new UserManager();
-        $userManager->findOne();
+        $user = $userManager->findOne($userId);
         require "./templates/layout.phtml";
     }
 
