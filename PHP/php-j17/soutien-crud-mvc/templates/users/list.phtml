@@ -2,7 +2,9 @@
 <ul>
     <?php foreach ($users as $user) { ?>
         <li>
-            <?= $user['first_name'] . ' ' . $user['last_name'] . ' à pour email : ' . $user['email'] ?>
+            <a href=<?= "index.php?route=show_user&id=" . $userId ?>>
+                <?= $user['first_name'] . ' ' . $user['last_name'] . ' à pour email : ' . $user['email'] ?>
+            </a>
         </li>
     <?php } ?>
 </ul>
