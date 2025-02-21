@@ -25,8 +25,8 @@ class Router
 
                 $userController->delete();
             }
+        } else {
+            $userController->list();
         }
-
-        $userController->list();
     }
 }
