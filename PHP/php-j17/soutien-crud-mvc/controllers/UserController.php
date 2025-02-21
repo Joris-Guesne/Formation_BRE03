@@ -16,6 +16,14 @@ class UserController
     public function checkCreate(): void
     {
         $title = "Vérif creation utilisateur";
+
+        $user = new User(htmlspecialchars($_POST["email"]), htmlspecialchars($_POST["first_name"]), htmlspecialchars($_POST["last_name"]));
+
+
+        $userManager = new UserManager();
+        $userManager->create($user);
+
+        header('Location: index.php');
     }
 
     public function show(): void
