@@ -1,7 +1,7 @@
 <h1>Liste des utilisateurs</h1>
 <ul>
     <?php foreach ($users as $user) { ?>
-        <?php $link = ("index.php?route=show_user&id=" . $userId) ?>
+        <?php $link = ("index.php?route=show_user&id=" . $user["id"]) ?>
         <li>
             <a href="<?= $link ?>">
                 <?= $user['first_name'] . ' ' . $user['last_name'] . ' à pour email : ' . $user['email'] ?>
