@@ -4,7 +4,7 @@ class UserController
 {
     public function create(): void
     {
-        $template = "create.phtml";
+        $template = "./templates/users/create.phtml";
         $title = "Créer utilisateur";
         require "./templates/layout.phtml";
     }
@@ -16,14 +16,14 @@ class UserController
 
     public function show(): void
     {
-        $template = "show.phtml";
+        $template = "./templates/users/show.phtml";
         $title = "Infos utilisateur";
         require "./templates/layout.phtml";
     }
 
     public function update(): void
     {
-        $template = "update.phtml";
+        $template = "./templates/users/update.phtml";
         $title = "Modif utilisateur";
         require "./templates/layout.phtml";
     }
@@ -40,7 +40,7 @@ class UserController
 
     public function list(): void
     {
-        $template = "list.phtml";
+        $template = "./templates/users/list.phtml";
         $title = "Liste des utilisateurs";
         require "./templates/layout.phtml";
     }
